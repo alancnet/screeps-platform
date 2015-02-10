@@ -26,20 +26,23 @@ function Platform(options) {
     this.dynamicObjects = {};
     this.memory = this.systemMemory.platform;
     this.game = options.game || Game;
-    this.objectCache = {};
+    this.heap = {};
     this.types = {};
     
     // Initialize dynamic objects
-    if (Game.rooms) {
+    if (this.game.rooms && this.game.getRoom) {
         // Normalize rooms interface
-        for (var name in Game.rooms) {
-            var room = Game.getRoom(name);
+        for (var name in this.game.rooms) {
+            var room = this.game.getRoom(name);
             if (room) {
                 room.id = 'room:' + room.name;
-                Game.rooms[name] = room;
+                this.game.rooms[name] = room;
             }
         }
     }
+    this.dynamicObjects['game'] = this.game;
+    this.game.id = this.game.id || 'game';
+
     _.forEach(['spawns', 'creeps', 'structures', 'flags', 'rooms'], function(names) {
         var arr = Game[names];
         _.forEach(arr, function(val) {
@@ -73,8 +76,8 @@ Platform.prototype.constructSingleton = function(constructor) {
         var ret = this.construct.apply(this, args);
         this.memory.singletons[constructor.name] = ret[OBJECT_ID];
     } else {
-        for (var key in this.objectCache) {
-            var obj = this.objectCache[key];
+        for (var key in this.heap) {
+            var obj = this.heap[key];
             if (obj[OBJECT_TYPE] === constructor.name) return obj;
         }
     }
@@ -100,7 +103,7 @@ Platform.prototype.construct = function construct(constructor) {
     var ret = constructor.apply(o, args);
     if (ret) throw new Error('Create classes using prototype pattern, '+
         'not module pattern. Objects are reconstructed using prototype.');
-    this.objectCache[objectId] = o;
+    this.heap[objectId] = o;
 
     o[OBJECT_ID] = objectId;
     o[OBJECT_TYPE] = constructor.name;
@@ -111,17 +114,7 @@ Platform.prototype.construct = function construct(constructor) {
  * Saved heap data
  */
 Platform.prototype.save = function() {
-// debugger///;
-    var data = {},
-        stack = [],
-        heap = this.objectCache;
-    _.forEach(heap, function(obj) {
-        deconstruct(obj);
-    });
-    
-    this.memory.heap = data;
-
-    function deconstruct(object) {
+    var deconstruct = function deconstruct(object) {
         if (stack.indexOf(object) != -1) throw new Error('Circular dependency');
         stack.push(object);
         if (object && object[OBJECT_ID] && data[object[OBJECT_ID]]) return;
@@ -142,13 +135,41 @@ Platform.prototype.save = function() {
         }.bind(this));
         data[object[OBJECT_ID]] = copy;
         if (stack.pop() !== object) throw new Error('Unexpected pop');
-    }
+    }.bind(this);
+
+    var data = {},
+        stack = [],
+        heap = this.heap;
+    _.forEach(heap, function(obj) {
+        deconstruct(obj);
+    }.bind(this));
+    
+    this.memory.heap = data;
+
 };
  
 /**
  * Loads saved heap data
  */
 Platform.prototype.load = function() {
+    var reconstruct = function reconstruct(constructor, copy) {
+        var o = Object.create(constructor.prototype);
+        var localData = _.cloneDeep(copy, function(value) {
+            if (value && value[OBJECT_ID] && value[OBJECT_ID] !== copy[OBJECT_ID]) {
+                var obj = heap[value[OBJECT_ID]];
+                if (!obj) throw new Error('Unresolved dependency');
+                return obj;
+            } else if (value && value[DYNAMIC_ID]) {
+                return this.dynamicObjects[value[DYNAMIC_ID]] || null;
+            } else {
+                return undefined;
+            }
+        }.bind(this));
+        _.extend(o, localData);
+        heap[o[OBJECT_ID]] = o;
+    }.bind(this);
+
+
     var heap = {},
         data = this.memory.heap || {};
         
@@ -158,24 +179,8 @@ Platform.prototype.load = function() {
         reconstruct(constructor, copy);
     }.bind(this));
 
-    this.objectCache = heap;
+    this.heap = heap;
  
-    function reconstruct(constructor, copy) {
-        var o = Object.create(constructor.prototype);
-        var localData = _.cloneDeep(copy, function(value) {
-            if (value && value[OBJECT_ID] && value[OBJECT_ID] !== copy[OBJECT_ID]) {
-                var obj = heap[value[OBJECT_ID]];
-                if (!obj) throw new Error('Unresolved dependency');
-                return obj;
-            } else if (value && value[DYNAMIC_ID]) {
-                return this.game.getObjectById(value[DYNAMIC_ID]) || null;
-            } else {
-                return undefined;
-            }
-        });
-        _.extend(o, localData);
-        heap[o[OBJECT_ID]] = o;
-    }
 };
 
 /**
@@ -212,10 +217,22 @@ Platform.Base = function Base() {
 /**
  * Registers an event handler
  * @param {string} name - Name of event
- * @param {string} handler - Name of event handler on class object
+ * @param {string|function} handler - Name of event handler on class object
  */
 Platform.Base.prototype.on = function(name, handler) {
-    if (typeof handler !== 'string') throw new Error('Event handler must be string name: on(\'event\', \'onEvent\');');
+    if (typeof handler === 'function') {
+        var handlerFound = false;
+        for (var key in this) {
+            if (this[key] == handler) {
+                handler = key;
+                handlerFound = true;
+                break;
+            }
+        }
+        if (!handlerFound) {
+            throw new Error('Event handlers must be public methods of the class.');
+        }
+    }
     this.__events[name] = handler;
 }
 
@@ -229,7 +246,7 @@ Platform.Base.prototype.emit = function(name) {
     for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
 
     // Call event handlers
-    _.forEach(platform.objectCache, function(obj) {
+    _.forEach(platform.heap, function(obj) {
         if (obj.__events && obj.__events[name]) {
             obj[obj.__events[name]].apply(obj, args);
         }
