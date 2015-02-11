@@ -2,6 +2,7 @@ var _ = require('lodash'),
     OBJECT_ID = '@platform.id',
     OBJECT_TYPE = '@platform.type',
     DYNAMIC_ID = '@platform.gameId',
+    entityCollections = ['spawns', 'creeps', 'structures', 'flags', 'rooms'],
     platform;
 
 
@@ -11,7 +12,7 @@ var _ = require('lodash'),
  * @property {Function} gameClass - GameClass constructor
  */
 
-/** 
+/**
  * Creates an instance of platform
  * @param {PlatformOptions} options
  */
@@ -28,7 +29,7 @@ function Platform(options) {
     this.game = options.game || Game;
     this.heap = {};
     this.types = {};
-    
+
     // Initialize dynamic objects
     if (this.game.rooms && this.game.getRoom) {
         // Normalize rooms interface
@@ -43,7 +44,7 @@ function Platform(options) {
     this.dynamicObjects['game'] = this.game;
     this.game.id = this.game.id || 'game';
 
-    _.forEach(['spawns', 'creeps', 'structures', 'flags', 'rooms'], function(names) {
+    _.forEach(entityCollections, function(names) {
         var arr = Game[names];
         _.forEach(arr, function(val) {
             this.dynamicObjects[val.id] = val;
@@ -84,7 +85,7 @@ Platform.prototype.constructSingleton = function(constructor) {
 }
 
 /**
- * Constructs a class by creating an object, and applying the 
+ * Constructs a class by creating an object, and applying the
  * constructor to it.
  * @param {Function} constructor - Reference to class constructor.
  * @param {...*} args - Arguments to pass to constructor
@@ -143,11 +144,11 @@ Platform.prototype.save = function() {
     _.forEach(heap, function(obj) {
         deconstruct(obj);
     }.bind(this));
-    
+
     this.memory.heap = data;
 
 };
- 
+
 /**
  * Loads saved heap data
  */
@@ -172,7 +173,7 @@ Platform.prototype.load = function() {
 
     var heap = {},
         data = this.memory.heap || {};
-        
+
     _.forEach(data, function(copy) {
         var constructor = this.types[copy[OBJECT_TYPE]];
         if (!constructor) throw new Error('Unknown type: ' + copy[OBJECT_TYPE]);
@@ -180,14 +181,14 @@ Platform.prototype.load = function() {
     }.bind(this));
 
     this.heap = heap;
- 
+
 };
 
 /**
  * Call from main per tick to announce to existing objects that a tick has occured
  */
 Platform.prototype.tick = function() {
-    this.emit('tick');
+    this.broadcast('tick');
 }
 
 /**
@@ -199,7 +200,7 @@ Platform.prototype.inherit = Platform.inherit = function inherit(constructor, ba
     var oldProto = constructor.prototype;
     var newProto = Object.create(baseConstructor.prototype);
     constructor.prototype = _.extend(newProto, oldProto);
-    
+
     //_.extend(constructor.prototype, baseConstructor.prototype);
     var oldBase = baseConstructor.prototype.base;
     constructor.prototype.base = function() {
@@ -210,48 +211,131 @@ Platform.prototype.inherit = Platform.inherit = function inherit(constructor, ba
     }
 }
 
-Platform.Base = function Base() {
-    this.__events = {};
-};
+/* Base Class */
+{
+    /**
+     * Base class for all things. Offers event pub/sub.
+     */
+    Platform.Base = function Base() {
+        this.__events = {};
+    };
 
-/**
- * Registers an event handler
- * @param {string} name - Name of event
- * @param {string|function} handler - Name of event handler on class object
- */
-Platform.Base.prototype.on = function(name, handler) {
-    if (typeof handler === 'function') {
-        var handlerFound = false;
-        for (var key in this) {
-            if (this[key] == handler) {
-                handler = key;
-                handlerFound = true;
-                break;
+    /**
+     * Registers an event handler
+     * @param {string} name - Name of event
+     * @param {string|function} handler - Name of event handler on class object
+     */
+    Platform.Base.prototype.on = function(name, handler) {
+        if (typeof handler === 'function') {
+            var handlerFound = false;
+            for (var key in this) {
+                if (this[key] == handler) {
+                    handler = key;
+                    handlerFound = true;
+                    break;
+                }
+            }
+            if (!handlerFound) {
+                throw new Error('Event handlers must be public methods of the class.');
             }
         }
-        if (!handlerFound) {
-            throw new Error('Event handlers must be public methods of the class.');
+        if (!this.__events[name]) this.__events[name] = [];
+        if (!handler) throw new Error('Null handler');
+        this.__events[name].push(handler);
+        //this.__events[name] = handler
+    }
+
+    /**
+     * Raise a system-wide event
+     * @param {string} name - Name of the event
+     * @param {...*} args - Arguments to pass to event handlers
+     */
+    Platform.Base.prototype.broadcast = function(name) {
+        var args = [];
+        for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
+
+        // Call event handlers
+        _.forEach(platform.heap, function(obj) {
+            if (obj.emit) obj.emit.apply(obj, args);
+        });
+    }
+
+
+    /**
+     * Raise an object-wide event
+     * @param {string} name - Name of the event
+     * @param {...*} args - Arguments to pass to event handlers
+     */
+    Platform.Base.prototype.emit = function(name) {
+        var args = [];
+        for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
+        if (this.__events && this.__events[name]) {
+            //this[this.__events[name]].apply(this, args);
+            this.__events[name].forEach(function(handler) {
+                if (this[handler]) this[handler].apply(this, args);
+            }.bind(this));
         }
     }
-    this.__events[name] = handler;
+    Platform.inherit(Platform, Platform.Base);
 }
 
-/**
- * Raise a system-wide event
- * @param {string} name - Name of the event
- * @param {...*} args - Arguments to pass to event handlers
- */
-Platform.Base.prototype.emit = function(name) {
-    var args = [];
-    for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+/* Base Game */
+{
+    Platform.BaseGame = function(game) {
+        this.base();
+        this.game = game;
+        this.on('tick', this.detectChanges);
+        this.on('rooms.new', 'onNewRoom');
+        this.on('rooms.lost', 'onLostRoom');
+        this.entities = {
+            byId: {}
+        };
+        entityCollections.forEach(function(collection) {
+            this.entities[collection] = [];
+        }.bind(this));
+    }
+    Platform.inherit(Platform.BaseGame, Platform.Base);
 
-    // Call event handlers
-    _.forEach(platform.heap, function(obj) {
-        if (obj.__events && obj.__events[name]) {
-            obj[obj.__events[name]].apply(obj, args);
-        }
-    });
+    Platform.BaseGame.prototype.detectChanges = function() {
+        var eventsToCall = {};
+        var byId = {};
+
+        entityCollections.forEach(function(collection) {
+            var lost = _.clone(this.entities[collection]);
+            var news = [];
+            var current = [];
+            _.forEach(this.game[collection], function(entity) {
+                byId[entity.id] = entity;
+                current.push(entity.id);
+                var i = lost.indexOf(entity.id);
+                if (i != -1) {
+                    lost.splice(i, 1);
+                } else {
+                    news.push(entity.id);
+                }
+            }.bind(this));
+
+            eventsToCall[collection] = {
+                news: news,
+                lost: lost
+            };
+            this.entities[collection] = current;
+        }.bind(this));
+        this.entities.byId = byId;
+
+        // After entities has been updated, publish the events
+        entityCollections.forEach(function(collection) {
+            eventsToCall[collection].news.forEach(function(id) {
+                this.broadcast(collection + '.new', byId[id]);
+            }.bind(this));
+            eventsToCall[collection].lost.forEach(function(id) {
+                this.broadcast(collection + '.lost', byId(id));
+            }.bind(this));
+        }.bind(this));
+
+    }
 }
-Platform.inherit(Platform, Platform.Base);
 
 module.exports = platform = new Platform(Game);
+platform.Base = Platform.Base;
+platform.BaseGame = Platform.BaseGame;
