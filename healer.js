@@ -12,15 +12,17 @@ module.exports = function(creep) {
         });
     }
     if (!target) {
-        return;
+        console.log('No one to heal');
+        return false;
     }
     if (creep.pos.isNearTo(target)) {
         creep.heal(target);
     } else {
         creep.rangedHeal(target);
     }
-    creep.moveTo(target);
+    creep.moveTo(target, true);
     if (creep.getActiveBodyparts(Game.RANGED_ATTACK)) {
         require('shootAtWill')(creep);
     }
+    return true;
 }

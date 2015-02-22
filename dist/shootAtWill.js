@@ -12,6 +12,7 @@ module.exports = function(creep) {
     }
     if (massDmg > 13) {
         creep.rangedMassAttack();
+        return true;
     } else {
         var min = -1,
             target;
@@ -21,6 +22,9 @@ module.exports = function(creep) {
                 min = targets[i].hits;
             }
         }
-        creep.rangedAttack(target);
+        if (target) {
+            creep.rangedAttack(target);
+            return true;
+        }
     }
 }

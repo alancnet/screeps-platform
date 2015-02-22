@@ -1,7 +1,7 @@
 (function() {
     //require('optimization');
     Memory.ticks = (Memory.ticks||0) + 1;
-    if (Memory.ticks > 1) {
+    if (Memory.ticks < 2)  return
     try {
     //    for (var key in Memory) {
     //        delete Memory[key];
@@ -14,7 +14,7 @@
     //require('tests')();
         var platform = require('platform'),
             baseCreep = require('basecreep'),
-            myTypes = ['mygame', 'myroom', 'myspawn', 'miner', 'miningsite', 'runner', 'energy', 'defender', 'medic'],
+            myTypes = ['mygame', 'myroom', 'myspawn', 'miner', 'miningsite', 'runner', 'energy', 'defender', 'medic', 'constructionsite'],
             MyGame = require('mygame');
 
         myTypes.forEach(function(lib) {
@@ -41,6 +41,5 @@
     } catch (e) {
         console.log('%c%s', 'color: red;', (e.stack|| e.messsage|| e.toString&& e.toString()||"null").replace(/blob:.+,/g, ''));
         throw e;
-    }
     }
 })();

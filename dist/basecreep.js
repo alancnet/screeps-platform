@@ -13,7 +13,8 @@ var temp = {
 };
 
 platform.BaseCreep.prototype.moveTo = function() {
-    var item, x, y;
+    if (this.fatigue) return;
+    var item, x, y, debug;
     if (typeof arguments[0] === 'number') {
         x = arguments[0];
         y = arguments[1];
@@ -26,7 +27,8 @@ platform.BaseCreep.prototype.moveTo = function() {
             x = item.pos.x;
             y = item.pos.y;
         }
-    }
+    };
+    if (typeof arguments[1] === 'boolean') debug = arguments[1];
 
     var pos = {x: x, y: y};
     if (Memory.routeComplete) {
@@ -48,7 +50,8 @@ platform.BaseCreep.prototype.moveTo = function() {
         if (target) {
             var move = route.getNextMove(this.creep.pos, target);
             if (move) {
-                this.creep.move(move.dir);
+                //this.creep.move(move.direction);
+                this.creep.moveTo(move.pos.x, move.pos.y);
                 temp.movedTo.push(move.pos);
                 var dirs = ['',
                     "T",
@@ -60,24 +63,25 @@ platform.BaseCreep.prototype.moveTo = function() {
                     "L",
                     "TL",
                 ];
-                //this.say('route ' + dirs[dir]);
+               // this.say('route ' + dirs[move.direction]);
                 return;
             }
 
         }
     }
 
-    var nativeRoute = this.creep.room.findPath(
-        this.creep.pos,
-        this.creep.room.getPositionAt(x, y),
-        {
-            avoid: temp.movedTo
-        }
-    );
-    if (nativeRoute) {
-
-    }
-    this.creep.moveTo(x, y);
+//    var nativeRoute = this.creep.room.findPath(
+//        this.creep.pos,
+//        this.creep.room.getPositionAt(x, y),
+//        {
+//            avoid: temp.movedTo
+//        }
+//    );
+//    if (nativeRoute) {
+//
+//    }
+    this.creep.moveTo(this.creep.room.getPositionAt(x, y));
+    //this.creep.moveTo(x, y);
     //this.say('move');
 
 }

@@ -3,9 +3,9 @@ var platform = require('platform'),
 module.exports = Miner;
 
 platform.inherit(Miner, platform.BaseCreep);
-function Miner(creep, source) {
+function Miner(creep, assignment) {
     this.base(creep);
-    this.source = source;
+    this.assignment = assignment;
     this.on('tick', this.doMining);
     this.on('spawned', this.onSpawned);
     this.on('damage', this.onDamage);
@@ -19,17 +19,13 @@ Miner.prototype.getBody = function(length) {
 
 Miner.prototype.doMining = function() {
     if (this.alive) {
-        if (this.source) {
-            if (this.source.energy) {
-                this.moveTo(this.source);
-                this.harvest(this.source);
-            } else {
-                var source = (util.find(this, Game.SOURCES, 1.5)).filter(function(s) {
-                    return !!s.energy;
-                })[0];
-                if (source) {
-                    this.harvest(source);
-                }
+        if (this.assignment) {
+            this.moveTo(this.assignment);
+            var source = (util.find(this, Game.SOURCES, 1.5)).filter(function(s) {
+                return !!s.energy;
+            })[0];
+            if (source) {
+                this.harvest(source);
             }
         } else {
             this.say('No source');

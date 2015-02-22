@@ -20,7 +20,7 @@ function ConstructionSite(constructionSite) {
     this.base();
     this.constructionSite = constructionSite;
     this.on('tick', this.checkAlive);
-    this.on('runner.full', this.relieveRunner);
+    this.on('runner.empty', this.relieveRunner);
     this.runners = [];
 }
 
@@ -38,7 +38,7 @@ ConstructionSite.prototype.relieveRunner = function(runner) {
 };
 
 ConstructionSite.prototype.checkAlive = function() {
-    this.alive = !!(this.constructionSite && this.constructionSite.constructionSite);
+    this.alive = !!(this.constructionSite && this.constructionSite.progress - this.constructionSite.progressTotal);
     if (!this.alive) {
         this.broadcast('constructionSiteCompleted', this);
         this.dispose();
@@ -48,11 +48,11 @@ ConstructionSite.prototype.checkAlive = function() {
 ConstructionSite.prototype.getRunnerCapacity = function() {
     var cap = 0;
     _.forEach(this.runners, function(runner) {
-        cap += runner.constructionSiteCapacity - runner.constructionSite;
+        cap += runner.energy;
     });
     return cap;
 };
 
-ConstructionSite.prototype.getUnclaimedConstructionSite = function() {
-    return Math.max(0, this.constructionSite.constructionSite - this.getRunnerCapacity());
+ConstructionSite.prototype.getUnclaimedWork = function() {
+    return Math.max(0, (this.constructionSite.progressTotal - this.constructionSite.progress) - this.getRunnerCapacity());
 };

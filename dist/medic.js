@@ -7,8 +7,8 @@ platform.inherit(Medic, platform.BaseCreep);
 function Medic(creep) {
     this.base(creep);
     this.on('tick', this.doHealer);
-    this.maxDistance = 7;
-    this.maxHostileDistance = 10;
+    this.maxDistance = 2;
+    this.maxHostileDistance = 15;
 }
 
 Medic.prototype.getBody = function(length, energy) {
@@ -16,22 +16,18 @@ Medic.prototype.getBody = function(length, energy) {
     while (body.length < length) {
         body.push('heal');
     }
-    while (util.cost(body) < energy) {
-        body.unshift('tough');
-    }
-    return util.maxCost(body, energy);
+    return body;
 };
 Medic.prototype.doHealer = function() {
     if (this.creep) {
         var hostile = util.findNearest(this, Game.HOSTILE_CREEPS);
         var spawn = util.findNearest(this, Game.MY_SPAWNS);
-        healer(this.creep);
-        if (spawn) {
-            var spawnDistance = util.distance(this, spawn);
-            if (spawnDistance > (hostile ? this.maxHostileDistance : this.maxDistance)) {
-                this.moveTo(spawn);
-
+        if (!healer(this.creep)) {
+            if (this.assignment && util.approxDistance(this.pos, this.assignment.pos) > 3) {
+                this.moveTo(this.assignment);
             }
+        } else {
+            this.say('OMW');
         }
     }
 };

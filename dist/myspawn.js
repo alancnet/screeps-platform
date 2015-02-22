@@ -27,6 +27,9 @@ MySpawn.prototype.onTick = function() {
     if (!this.spawningCreep && !this.spawning) {
         var creep = this.queue[0];
         var body = creep && creep.getBody(5, this.energy);
+        while (util.cost(body) > this.energy && body.indexOf('tough') != -1) {
+            body.splice(body.indexOf('tough'), 1);
+        }
         if (creep) {
             if (this.energy >= util.cost(body)) {
                 console.log('Spawn', creep.name, creep.getBody(5, this.energy));

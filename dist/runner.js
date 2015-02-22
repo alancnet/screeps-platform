@@ -23,10 +23,17 @@ Runner.prototype.run = function() {
         else if (this.assignment && this.assignment.energy && this.energy < this.energyCapacity) {
             this.moveTo(this.assignment);
             this.pickup(this.assignment);
+        } else if (this.assignment && this.assignment.progressTotal && this.energy) {
+            var dist = util.approxDistance(this, this.assignment);
+            if (dist == 0) util.moveAwayFrom(this, this.assignment);
+            if (dist > 1) this.moveTo(this.assignment);
+            if (dist == 1) this.build(this.assignment);
         } else if (this.energy) {
             if (this.assignment) this.broadcast('runner.full', this);
             var spawn = util.moveToNearest(this, Game.MY_SPAWNS);
             this.transferEnergy(spawn);
+        } else if (!this.energy) {
+            if (this.assignment) this.broadcast('runner.empty', this);
         } else {
             // TODO: Move Away from Spawn
         }

@@ -8,6 +8,7 @@ var map = {
     performRouting:  performRouting,
     forWholeMap: forWholeMap,
     forNeighbors: forNeighbors,
+    forNeighbors2: forNeighbors2,
     getNextMove: getNextMove
 };
 var room;
@@ -47,7 +48,7 @@ function init() {
         return;
     }
     if (!Memory.routeComplete) {
-        if (performRouting(200)) {
+        if (performRouting(5)) {
             console.log('Route complete');
             Memory.routeComplete = true;
             //visualize(Memory.destinations[0]);
@@ -174,6 +175,30 @@ function forNeighbors(x, y, fn) {
         }
     }
 }
+function forNeighbors2(x, y, fn) {
+    f(-2, -2, Game.TOP_LEFT);
+    f(-1, -2, Game.TOP_LEFT);
+    f(0, -2, Game.TOP);
+    f(1, -2, Game.TOP_RIGHT);
+    f(2, -2, Game.TOP_RIGHT);
+    f(2, -1, Game.TOP_RIGHT);
+    f(2, 0, Game.RIGHT);
+    f(2, 1, Game.BOTTOM_RIGHT);
+    f(2, 2, Game.BOTTOM_RIGHT);
+    f(1, 2, Game.BOTTOM_RIGHT);
+    f(0, 2, Game.BOTTOM);
+    f(-1, 2, Game.BOTTOM_LEFT);
+    f(-2, 2, Game.BOTTOM_LEFT);
+    f(-2, 1, Game.BOTTOM_LEFT);
+    f(-2, 0, Game.BOTTOM_LEFT);
+    f(-2, -1, Game.TOP_LEFT);
+
+    function f(dx, dy, dir) {
+        var i = index(x+dx, y+dy);
+        if (Memory.map[i]) fn(x+dx, y+dy, i, dir);
+    }
+
+}
 
 function forWholeMap(fn) {
     for (var y = 0; y < 50; y++) {
@@ -228,9 +253,9 @@ function getNextMove(pos, target, avoid) {
     var mval = val;
     var mx, my;
     var dir = 0;
-    var area = room.lookAtArea(pos.y - 1, pos.x - 1, pos.y + 1, pos.x + 1);
+    var area = room.lookAtArea(pos.y - 2, pos.x - 2, pos.y + 2, pos.x + 2);
     if (!avoid) avoid = [];
-    forNeighbors(pos.x, pos.y, function(nx, ny, ni, ndir) {
+    forNeighbors2(pos.x, pos.y, function(nx, ny, ni, ndir) {
         for (var i = 0; i < avoid.length; i++) {
             if (avoid[i].x == nx && avoid[i].y == ny) return;
         }

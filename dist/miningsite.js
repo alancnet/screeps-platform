@@ -12,6 +12,7 @@ function MiningSite(source) {
         y: source.pos.y
     };
     this.allPositions = util.getEmptyPositionsAround(this.source);
-    util.decoratePositions(this.source.room, this.allPositions, 'yellow');
+    this.unassignedPositions = this.allPositions.slice(0, 2);
+    //util.decoratePositions(this.source.room, this.allPositions, 'yellow');
 }
 

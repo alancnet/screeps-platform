@@ -1,3 +1,4 @@
+var util = require('util');
 module.exports = function(creep, ignoreCreeps, defend) {
     function find(opts) {
         opts = opts || {};
@@ -56,7 +57,7 @@ module.exports = function(creep, ignoreCreeps, defend) {
             });
         }
         if (!target) {
-            target = creep.pos.findClosest(Game.HOSTILE_CREEPS);
+            target = util.findNearest(creep, Game.HOSTILE_CREEPS);//  creep.pos.findClosest(Game.HOSTILE_CREEPS);
             if (target) {
                 creep.moveTo(target);
             }
@@ -72,11 +73,11 @@ module.exports = function(creep, ignoreCreeps, defend) {
             }
         }
         if (!target) {
-            return;
+            return false;
         }
         creep.attack(target);
     }
     if (creep.getActiveBodyparts(Game.RANGED_ATTACK)) {
-        require('shootAtWill')(creep);
+        return require('shootAtWill')(creep);
     }
 }
