@@ -21,9 +21,21 @@ Defender.prototype.getBody = function(length, energy) {
 
 Defender.prototype.defend = function() {
     if (this.alive) {
-        require('findAttack')(this, false, false);
+        //require('findAttack')(this, false, false);
         var hostile = util.findNearest(this, Game.HOSTILE_CREEPS);
-        if (this.assignment) this.moveTo(this.assignment);
+        var hostileDistance = util.approxDistance(this, hostile);
+        if (this.assignment) {
+            if (util.approxDistance(this, this.assignment) > 3) {
+                this.moveTo(this.assignment);
+            } else {
+                this.assignment = null;
+            }
+        }
+        if (!this.assignment) {
+            if (hostile && hostileDistance < 5 && hostileDistance > 3) {
+
+            }
+        }
 
         var spawn = util.findNearest(this, Game.MY_SPAWNS);
         if (spawn) {

@@ -21,7 +21,8 @@ module.exports = {
     getEmptyPositionsAround: getEmptyPositionsAround,
     moveAwayFromNearest: moveAwayFromNearest,
     moveAwayFrom: moveAwayFrom,
-    approxDistance: approxDistance
+    approxDistance: approxDistance,
+    moveTowards: moveTowards
 };
 
 function distance(a, b) {
@@ -115,10 +116,7 @@ function find(creep, type, range) {
     var objs = creep.room.find(type);
     if (objs && objs.length) {
         objs.forEach(function(obj) {
-            obj.distance = Math.sqrt(
-                Math.pow(creep.pos.x - obj.pos.x, 2) +
-                    Math.pow(creep.pos.y - obj.pos.y, 2)
-            );
+            obj.distance = approxDistance(creep, obj);
         });
         objs.sort(function(a, b) {
             return a.distance - b.distance;
@@ -277,3 +275,18 @@ function findByPos(arr, x, y) {
         }
     }
 }
+
+function moveTowards(creep, target) {
+    var xd = (target.pos || target).x - creep.pos.x,
+        yd = (target.pos || target).y - creep.pos.y;
+
+    // Approx Normalize
+    var max = Math.max(Math.abs(xd), Math.abs(yd));
+    xd = Math.round(xd / max);
+    yd = Math.round(yd / max);
+
+    creep.moveTo(creep.pos.x + xd, creep.pos.y + yd);
+
+}
+
+//TODO: Keep replacing native functions.  

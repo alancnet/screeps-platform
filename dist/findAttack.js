@@ -8,7 +8,7 @@ module.exports = function(creep, ignoreCreeps, defend) {
         }
         target = creep.pos.findClosest(possibleTargets, opts);
         if (target) {
-            creep.moveTo(target, opts);
+            util.moveTowards(creep, target);
         }
         return target;
     }
@@ -34,9 +34,13 @@ module.exports = function(creep, ignoreCreeps, defend) {
                 return i.getActiveBodyparts('heal') > 0;
             }
         });
-        if (!target || creep.moveTo(target) != Game.OK) {
+        if (target) {
+            util.moveTowards(creep, target);
             target = null;
         }
+        //if (!target || creep.moveTo(target) != Game.OK) {
+        //    target = null;
+        //}
     }
     var nearCreeps = creep.pos.findInRange(Game.HOSTILE_CREEPS, 1);
     if (nearCreeps) {

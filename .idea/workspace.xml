@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a35ac7b-33a8-4edc-bc9f-0fd3a2b175d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/basecreep.js" afterPath="$PROJECT_DIR$/dist/basecreep.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/constructionsite.js" afterPath="$PROJECT_DIR$/dist/constructionsite.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/screeps_platform_node_modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/defender.js" afterPath="$PROJECT_DIR$/dist/defender.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/findAttack.js" afterPath="$PROJECT_DIR$/dist/findAttack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/healer.js" afterPath="$PROJECT_DIR$/healer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/main.js" afterPath="$PROJECT_DIR$/dist/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/medic.js" afterPath="$PROJECT_DIR$/dist/medic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/miner.js" afterPath="$PROJECT_DIR$/dist/miner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/miningsite.js" afterPath="$PROJECT_DIR$/dist/miningsite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/myroom.js" afterPath="$PROJECT_DIR$/dist/myroom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/myspawn.js" afterPath="$PROJECT_DIR$/dist/myspawn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/route.js" afterPath="$PROJECT_DIR$/dist/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/runner.js" afterPath="$PROJECT_DIR$/dist/runner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/shootAtWill.js" afterPath="$PROJECT_DIR$/dist/shootAtWill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/screeps-platform.iml" afterPath="$PROJECT_DIR$/.idea/screeps-platform.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/util.js" afterPath="$PROJECT_DIR$/dist/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="screeps-platform.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,91 +32,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="defender.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="defender.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/defender.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1100">
+            <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1054">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="findAttack.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="findAttack.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/findAttack.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="15" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.0" vertical-offset="1084" max-vertical-offset="1936">
+            <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1564">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="medic.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="medic.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/medic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="35" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="858">
+            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="663">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shootAtWill.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="shootAtWill.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/shootAtWill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="24" selection-start="865" selection-end="865" vertical-scroll-proportion="0.7486911" vertical-offset="0" max-vertical-offset="792">
+            <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="612">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="9" selection-start="7593" selection-end="7593" vertical-scroll-proportion="0.0" vertical-offset="5484" max-vertical-offset="6248">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4205" max-vertical-offset="5049">
+              <caret line="291" column="41" selection-start-line="291" selection-start-column="41" selection-end-line="291" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="constructionsite.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/constructionsite.js">
+      <file leaf-file-name="myroom.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/myroom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="93" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" vertical-offset="644" max-vertical-offset="1408">
+            <state vertical-scroll-proportion="0.6202749" vertical-offset="3685" max-vertical-offset="4267">
+              <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="route.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="274" column="23" selection-start="8058" selection-end="8058" vertical-scroll-proportion="-18.821428" vertical-offset="5501" max-vertical-offset="6292">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4658" max-vertical-offset="4862">
+              <caret line="274" column="23" selection-start-line="274" selection-start-column="23" selection-end-line="274" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basecreep.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="basecreep.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/basecreep.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="29" selection-start="420" selection-end="420" vertical-scroll-proportion="-11.785714" vertical-offset="0" max-vertical-offset="2046">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1581">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miningsite.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="miningsite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/miningsite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="408">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="platform.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/platform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="23" selection-start="3621" selection-end="3621" vertical-scroll-proportion="0.0" vertical-offset="2087" max-vertical-offset="12760">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="9860">
+              <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -139,47 +143,44 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mygame.js" />
-        <option value="$PROJECT_DIR$/platform.js" />
-        <option value="$PROJECT_DIR$/dist/myharvester.js" />
-        <option value="$PROJECT_DIR$/dist/cloneDeep.js" />
-        <option value="$PROJECT_DIR$/dist/mygame.js" />
-        <option value="$PROJECT_DIR$/dist/performance.js" />
-        <option value="$PROJECT_DIR$/dist/myPerformance.js" />
-        <option value="$PROJECT_DIR$/engine.js" />
-        <option value="$PROJECT_DIR$/findAttack.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/dist/map.js" />
-        <option value="$PROJECT_DIR$/shootAtWill.js" />
-        <option value="$PROJECT_DIR$/dist/optimization.js" />
-        <option value="$PROJECT_DIR$/dist/platform.js" />
-        <option value="$PROJECT_DIR$/dist/logic.js" />
-        <option value="$PROJECT_DIR$/dist/energy.js" />
-        <option value="$PROJECT_DIR$/dist/util.js" />
-        <option value="$PROJECT_DIR$/dist/myspawn.js" />
-        <option value="$PROJECT_DIR$/healer.js" />
-        <option value="$PROJECT_DIR$/dist/defender.js" />
         <option value="$PROJECT_DIR$/dist/miningsite.js" />
-        <option value="$PROJECT_DIR$/dist/miner.js" />
-        <option value="$PROJECT_DIR$/dist/runner.js" />
-        <option value="$PROJECT_DIR$/dist/constructionsite.js" />
-        <option value="$PROJECT_DIR$/dist/route.js" />
-        <option value="$PROJECT_DIR$/dist/main.js" />
-        <option value="$PROJECT_DIR$/dist/medic.js" />
-        <option value="$PROJECT_DIR$/dist/basecreep.js" />
-        <option value="$PROJECT_DIR$/dist/myroom.js" />
         <option value="$PROJECT_DIR$/dist/findAttack.js" />
-        <option value="$PROJECT_DIR$/dist/shootAtWill.js" />
+        <option value="$PROJECT_DIR$/dist/util.js" />
       </list>
     </option>
   </component>
+  <component name="JsGruntFileManager">
+    <gruntfiles>
+      <GruntfileState>
+        <multi-tasks>
+          <GruntMultiTaskState>
+            <name>screeps</name>
+            <targets>
+              <target value="dist" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>watch</name>
+            <targets>
+              <target value="scripts" />
+            </targets>
+          </GruntMultiTaskState>
+        </multi-tasks>
+        <gruntfile-path>$PROJECT_DIR$/gruntfile.js</gruntfile-path>
+      </GruntfileState>
+    </gruntfiles>
+    <initial>false</initial>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1050" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1678" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -195,7 +196,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -246,11 +247,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3125" />
-    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value="shootatwill&#10;myroom&#10;defender&#10;planbuildings&#10;medic&#10;main&#10;construct&#10;miningsite&#10;moveto&#10;route&#10;runner&#10;room&#10;main.js&#10;miner.js&#10;basecreep&#10;myspawn&#10;heal&#10;healer.js&#10;moveTo&#10;util&#10;basecree&#10;mygame&#10;basegame&#10;ref.js&#10;moveawayfrom&#10;straight&#10;getempty&#10;ref&#10;platform&#10;createminer&#10;deployUnits&#10;expect&#10;energy&#10;base = function ba&#10;miner&#10;baseroom" />
+    <property name="SearchEverywhereHistory" value="util&#10;shootatwill&#10;myroom&#10;defender&#10;planbuildings&#10;medic&#10;main&#10;construct&#10;miningsite&#10;moveto&#10;route&#10;runner&#10;room&#10;main.js&#10;miner.js&#10;basecreep&#10;myspawn&#10;heal&#10;healer.js&#10;moveTo&#10;basecree&#10;mygame&#10;basegame&#10;ref.js&#10;moveawayfrom&#10;straight&#10;getempty&#10;ref&#10;platform&#10;createminer&#10;deployUnits&#10;expect&#10;energy&#10;base = function ba&#10;miner&#10;baseroom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="util.js&#9;FILE&#9;file://C:/git/screeps-platform/dist/util.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -258,95 +262,89 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6a35ac7b-33a8-4edc-bc9f-0fd3a2b175d5" name="Default" comment="" />
       <created>1423632214599</created>
+      <option name="number" value="Default" />
       <updated>1423632214599</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="1" y="1" width="1678" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28329572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29874572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10609481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31174302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30173776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34879518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10609481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -362,341 +360,383 @@
     <breakpoint-manager>
       <option name="time" value="1" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/mygame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="594">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="594">
+          <caret line="1" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="25" selection-start="2755" selection-end="2764" vertical-scroll-proportion="0.0" vertical-offset="2094" max-vertical-offset="3630">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2094" max-vertical-offset="3630">
+          <caret line="104" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/myroom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="45" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.0" vertical-offset="2068" max-vertical-offset="2926">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2068" max-vertical-offset="2926">
+          <caret line="113" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/energy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="1364">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="1364">
+          <caret line="24" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="51" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="770">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="770">
+          <caret line="23" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="6" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1122">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1122">
+          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/myspawn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="880">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="880">
+          <caret line="20" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/myroom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1276">
+        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="1276">
+          <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/miner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="682">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="682">
+          <caret line="24" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/mygame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="594">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="594">
+          <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/platform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="511" column="0" selection-start="16965" selection-end="16965" vertical-scroll-proportion="0.0" vertical-offset="11009" max-vertical-offset="12144">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11009" max-vertical-offset="12144">
+          <caret line="511" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/cloneDeep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="492" selection-start="4621" selection-end="4621" vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="484">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="484">
+          <caret line="11" column="492" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/lang/cloneDeep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="12" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1276" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1276">
+          <caret line="48" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/internal/baseClone.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="0" selection-start="4479" selection-end="4479" vertical-scroll-proportion="0.0" vertical-offset="2121" max-vertical-offset="2992" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2121" max-vertical-offset="2992">
+          <caret line="130" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/internal/initCloneArray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/lang.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726">
+          <caret line="2" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/lang/cloneDeep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="12" selection-start="1763" selection-end="1763" vertical-scroll-proportion="1.186747" vertical-offset="465" max-vertical-offset="1276" />
+        <state vertical-scroll-proportion="1.186747" vertical-offset="465" max-vertical-offset="1276">
+          <caret line="48" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/internal/baseClone.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="0" selection-start="4479" selection-end="4479" vertical-scroll-proportion="1.4839357" vertical-offset="2121" max-vertical-offset="2992" />
+        <state vertical-scroll-proportion="1.4839357" vertical-offset="2121" max-vertical-offset="2992">
+          <caret line="130" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/cloneDeep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="492" selection-start="4621" selection-end="4621" vertical-scroll-proportion="0.49896908" vertical-offset="0" max-vertical-offset="485">
-          <folding />
+        <state vertical-scroll-proportion="0.49896908" vertical-offset="0" max-vertical-offset="485">
+          <caret line="11" column="492" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/lodash/internal/initCloneArray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="212" selection-end="212" vertical-scroll-proportion="0.30923694" vertical-offset="0" max-vertical-offset="704" />
+        <state vertical-scroll-proportion="0.30923694" vertical-offset="0" max-vertical-offset="704">
+          <caret line="7" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt-screeps/node_modules/nock/node_modules/debug/node.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="2970" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="2970">
+          <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt-screeps/node_modules/nock/node_modules/debug/node_modules/ms/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="71" selection-end="71" vertical-scroll-proportion="0.17948718" vertical-offset="0" max-vertical-offset="2574" />
+        <state vertical-scroll-proportion="0.17948718" vertical-offset="0" max-vertical-offset="2574">
+          <caret line="7" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt-screeps/node_modules/grunt/node_modules/iconv-lite/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1892" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1892">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/myPerformance.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <caret line="12" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2898" column="0" selection-start="128047" selection-end="128047" vertical-scroll-proportion="0.0" vertical-offset="63448" max-vertical-offset="147532">
+        <state vertical-scroll-proportion="0.0" vertical-offset="63448" max-vertical-offset="147532">
+          <caret line="2898" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/optimization.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
-          <folding>
-            <marker date="1424184964244" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+          <caret line="7" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/findAttack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1914">
-          <folding />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1914">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shootAtWill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/mygame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="396" selection-end="396" vertical-scroll-proportion="0.54320985" vertical-offset="0" max-vertical-offset="594">
-          <folding />
+        <state vertical-scroll-proportion="0.54320985" vertical-offset="0" max-vertical-offset="594">
+          <caret line="14" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ref.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="50" selection-start="3386" selection-end="3386" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="57926">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="57926">
+          <caret line="75" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/logic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="8" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/energy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="0" selection-end="1512" vertical-scroll-proportion="0.19201522" vertical-offset="361" max-vertical-offset="1408">
-          <folding />
+        <state vertical-scroll-proportion="0.19201522" vertical-offset="361" max-vertical-offset="1408">
+          <caret line="21" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/healer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="1" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="726">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="726">
+          <caret line="27" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/myspawn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="17" selection-start="2708" selection-end="2708" vertical-scroll-proportion="0.56435645" vertical-offset="1466" max-vertical-offset="1870">
-          <folding />
+        <state vertical-scroll-proportion="0.56435645" vertical-offset="1466" max-vertical-offset="1870">
+          <caret line="77" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/miner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="640" selection-end="640" vertical-scroll-proportion="0.42255434" vertical-offset="173" max-vertical-offset="1034">
-          <folding />
+        <state vertical-scroll-proportion="0.42255434" vertical-offset="173" max-vertical-offset="1034">
+          <caret line="22" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="70" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.8560209" vertical-offset="116" max-vertical-offset="1012">
-          <folding />
+        <state vertical-scroll-proportion="0.8560209" vertical-offset="116" max-vertical-offset="1012">
+          <caret line="35" column="70" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/constructionsite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="93" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" vertical-offset="644" max-vertical-offset="1408">
+        <state vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1088">
+          <caret line="56" column="93" selection-start-line="56" selection-start-column="93" selection-end-line="56" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="23" selection-start="8058" selection-end="8058" vertical-scroll-proportion="-18.821428" vertical-offset="5501" max-vertical-offset="6292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/miningsite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4658" max-vertical-offset="4862">
+          <caret line="274" column="23" selection-start-line="274" selection-start-column="23" selection-end-line="274" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/platform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="23" selection-start="3621" selection-end="3621" vertical-scroll-proportion="0.0" vertical-offset="2087" max-vertical-offset="12760">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="9860">
+          <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="3" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/medic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/defender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1100">
+        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="663">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/basecreep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="420" selection-end="420" vertical-scroll-proportion="-11.785714" vertical-offset="0" max-vertical-offset="2046">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/myroom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="15" selection-start="8884" selection-end="8884" vertical-scroll-proportion="0.0" vertical-offset="4749" max-vertical-offset="5522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/findAttack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="15" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.0" vertical-offset="1084" max-vertical-offset="1936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="9" selection-start="7593" selection-end="7593" vertical-scroll-proportion="0.0" vertical-offset="5484" max-vertical-offset="6248">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1581">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/shootAtWill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="24" selection-start="865" selection-end="865" vertical-scroll-proportion="0.7486911" vertical-offset="0" max-vertical-offset="792">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="612">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/defender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1054">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/miningsite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/findAttack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="2392">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4205" max-vertical-offset="5049">
+          <caret line="291" column="41" selection-start-line="291" selection-start-column="41" selection-end-line="291" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/myroom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6202749" vertical-offset="3685" max-vertical-offset="4267">
+          <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
